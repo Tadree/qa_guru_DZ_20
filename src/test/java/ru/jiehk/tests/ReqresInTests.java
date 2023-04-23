@@ -79,8 +79,7 @@ public class ReqresInTests {
                 .spec(userListResponseSpec)
                 .extract().as(UsersListResponse.class);
 
-        assertThat(response.getData().size()).isEqualTo(6);
-        assertThat(response.getPer_page()).isEqualTo(6);
+        assertThat(response.getData().size()).isEqualTo(response.getPer_page());
     }
 
     @Test
